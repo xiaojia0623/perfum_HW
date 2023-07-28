@@ -1,0 +1,90 @@
+//banner 區塊
+.banner{
+    background-image: url(https://images.unsplash.com/photo-1588159343745-445ae0b16383?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 870px;
+    .container{
+        max-width: 1296px;
+        margin: 0 auto;
+        .banner-content{
+            max-width: 100%;
+            display: grid;
+            justify-content: end;
+            text-align: left;
+            padding-top: 20%;
+            padding-right: 5%;
+            h1{
+                color:#ffffff;
+                font-size: $font-s-40;
+                line-height: 60px;
+                font-weight: bold;
+            }
+            p{
+                color:#ffffff;
+                font-size: $font-s-24;
+                line-height: 36px;
+                margin-bottom: 16px;
+            }
+            .btn{
+                max-width: 85%;
+                border-radius:30px;
+                border: 2px solid #ffffff;
+                color:#ffffff;
+                font-size: $font-s-28;
+                line-height: 42px;
+                &:hover{
+                    background-color: hsl(0, 0%, 90%) ;
+                }
+
+            }
+        }
+    }
+}
+@include pad{
+    .banner{
+        max-width: 100%;
+        object-fit: cover;
+        height: 480px;
+        .container{
+            justify-content: center;
+            .banner-content{
+                display: grid;
+                justify-content: center;
+                text-align: left;
+                padding-top: 15%;
+            }
+        }
+    }
+}
+@include iphone{
+    .banner{
+        background-position: left center;
+        background-size: cover;
+        max-width: 100%;
+        padding: 0 12px;
+        .container{
+            justify-content: center;
+            .banner-content{
+                display: grid;
+                justify-content: center;
+                text-align: left;
+                h1{
+                    font-size: $font-s-30;
+                    line-height: 48px;
+                }
+                p{
+                    font-size: $font-s-20;
+                    line-height: 30px;
+                    br{
+                        display: none;
+                    }
+                }
+                .btn{
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}

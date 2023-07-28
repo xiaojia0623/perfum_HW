@@ -1,0 +1,141 @@
+
+
+//產品頁第二菜單導覽頁 相關設定
+.secNav{
+    background-color: $dark-brown;
+    .container{
+        margin: 0 auto;
+        ul{
+            margin: 0 auto;
+            display: flex;
+            .secItem{
+                margin-right: 28px;
+                padding: 14px 0;
+                a{
+                    color:#ffffff;
+                    font-size: $font-s-20;
+                    line-height: 30px;
+                    text-decoration: none;
+                    &:hover{
+                        color:blue;
+                    }
+                }
+            }
+        }
+    }
+}
+@include iphone{
+    .secNav{
+        display: none;
+    }
+    
+}
+
+//產品頁上方第二菜單導覽頁 相關設定
+
+.product-items{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 80px 0;
+    gap:30px;
+    .item{
+        margin-bottom: 56px;
+        img{
+            width: 255px;height: 255px;
+            object-fit: cover;
+        }
+        .proPrice{
+            h1{
+                line-height: 36px;
+                font-size: $font-s-24;
+            }
+            p{
+                line-height: 24px;
+                font-size: 16px;
+            }
+            .gray-price{
+                display: flex;
+                p{
+                   margin-right: 8px; 
+                }
+                span{
+                    line-height: 24px;
+                    font-size: 16px;
+                    text-decoration: line-through;
+                    color:#8D8D8D;
+                }
+            }
+        }
+        .pro-color{
+            display: flex;
+            .icon{
+                a{
+                    width: 22px;
+                    color:#916019;
+                    &:hover{
+                        color:red;
+                    }
+                }
+            }
+            .heart-icon{
+                margin-right: 8px;
+            }
+        }
+    }
+}
+
+@include pad{
+    .product-items{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@include iphone{
+    .product-items{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap:15px;
+        .item{
+            margin-bottom: 30px;
+            img{
+                width: 120px;height: 165px;
+                object-fit: cover;
+            }
+            .proPrice{
+                h1{
+                    font-size: 18px;
+                }
+                .gray-price{
+                    p{
+                        font-size: 16px;
+                    }
+                    span{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+//產品頁下方頁碼 相關設定
+.pages{
+    padding-bottom: 60px;
+    .pagination{
+        .page-item{
+            a{
+                line-height: 30px;
+                font-size: $font-s-20;
+                color:#000;
+                &.active{
+                    text-decoration: underline;
+                    color:#AC8A46;
+                }
+            }
+        }
+    }
+}

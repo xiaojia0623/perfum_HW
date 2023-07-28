@@ -1,0 +1,123 @@
+//navbar 相關設定
+.header{
+    .container{
+        width: 1296px;
+        margin: 0 auto;
+        padding: 9px;
+        .header-items{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .menu{
+                gap:32px;
+                display: flex;
+                justify-content: space-between;
+                .menu-item{
+                    a{
+                        align-items: center;
+                        display: flex;
+                        text-decoration: none;
+                        line-height: 30px;
+                        font-size: 20px;
+                        color: #8D8D8D;
+                        .material-symbols-outlined{
+                            margin-right: 3px;
+                        }
+                        &:hover{
+                            color:$dark-brown;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//響應式可看的navbar相關設定
+.navbar-mobile-top, .mobile-menu{
+    display: none;
+}
+.navbar-mobile-top{
+    padding: 9px 12px;
+    .container{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        .top-icons{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .cart-num{
+                .cart-icon {
+                    position: relative;
+                    font-size: 20px;
+                    i{
+                        color:#8D8D8D;
+                    }
+                    span {
+                        padding: 2px 6px;
+                        background-color: #AC8A46;
+                        color: #fff;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: -4px;
+                        right: -2px;
+                        font-size: 8px;
+                    }
+                }
+            }
+            .bar-icon{
+                margin-left: 8px;
+                .material-symbols-outlined{
+                    color:#8D8D8D;
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+//響應式時可顯示的下拉menu 設定
+.mobile-menu{
+    ul{
+        max-width: 100%;
+        li{
+            background-color: #707070;
+            padding: 8px;
+            text-align: center;
+            border-bottom: 1px solid #ffffff;
+            a{
+                text-decoration: none;
+                text-align: center;
+                color:#ffffff;
+                &:hover{
+                    color:$light-brown;
+                }
+            }
+        }
+    }
+}
+//響應式時可顯示的下拉menu在平板手機的開關設定
+@include pad{
+    .header{
+        display: none;
+    }
+    
+    .navbar-mobile-top{
+        display: block;
+    }
+    .mobile-menu{
+        display: none;
+    }
+}
+
+@include iphone{
+    .header{
+        display: none;
+    }
+    .navbar-mobile-top{
+        display: block;
+    }
+    .mobile-menu{
+        display: none;
+    }
+}

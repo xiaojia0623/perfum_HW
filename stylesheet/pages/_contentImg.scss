@@ -1,0 +1,62 @@
+//圖+文章內容區塊 相關設定
+.contentImg{
+    padding: 60px 0;
+    .container{
+        max-width: 1296px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .leftTopImg{
+            max-width: 100%;
+            margin-right: 30px;
+            img{
+                width: 730px;height: 520px;
+                object-fit: cover;
+            }
+        }
+        .imgContent{
+            text-align: left;
+            h5{
+                font-size: $font-s-32;
+                line-height: 48px;
+                font-weight: bold;
+            }
+            .topP{
+                font-size: $font-s-20;
+                line-height: 30px;
+                margin-bottom: 16px;
+            }
+            .rContent{
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@include pad{
+    .contentImg{
+        .container{
+            flex-direction: column;
+            padding: 0 12px;
+
+        }
+    }
+}
+@include iphone{
+    .contentImg{
+        .container{
+            padding: 0 12px;
+            .leftTopImg{
+                margin: 0 auto;
+            }
+            .imgContent{
+                br{
+                    display: none;
+                }
+            }
+        }
+    }
+}

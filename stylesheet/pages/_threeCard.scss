@@ -1,0 +1,72 @@
+.threeCard{
+    background-color: $bg-gray;
+    padding: 40px 0;
+    .container{
+        max-width: 1296px;
+        margin: 0 auto;
+        .cardPrice{
+            display: flex;
+            justify-content: space-between;
+            gap:24px;
+            .famItem{
+                width: 100%;
+                .item-pic{
+                    display: block;
+                    img{
+                        flex:1 1 auto;
+                        height:540px
+                    }
+                }
+                .item-body{
+                    h4{
+                        font-size: $font-s-24;
+                        line-height: 36px;
+                        font-weight: bold;
+                    }
+                    .name{
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin-bottom: 16px;
+                    }
+                    .price{
+                        font-size: 16px;
+                        line-height: 24px;
+                        span{
+                            margin-left: 8px;
+                            color:#8D8D8D;
+                            text-decoration: line-through;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.item-pic{
+    position:relative;
+    .soldImg{
+        opacity:.4;
+    }
+    .soldoutText{
+        position: absolute;
+        color:#fff;
+        font-size:24px;
+        font-weight:bold;
+        top:50%;left:50%;
+        transform:translate(-50%,-50%);
+    }
+}
+
+@include iphone{
+    .threeCard{
+        padding: 40px 0;
+    }
+    .cardPrice{
+        flex-direction: column;
+        padding: 0px 12px;
+        .famItem{
+            max-width: 100%;
+        }
+    }
+}

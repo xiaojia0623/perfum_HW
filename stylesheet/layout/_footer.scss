@@ -1,0 +1,126 @@
+//訂閱區塊 subcribeSection
+.subcribeSection{
+    background-image: url(https://images.unsplash.com/photo-1532413992378-f169ac26fff0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1780&q=80);
+    background-size:cover;
+    background-position:center center;
+    height:600px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    .container{
+        margin: 0 auto;
+        .subContent{
+            width:100%;
+            display:flex;
+            flex-direction:column;
+            margin-bottom:112px;
+            h6{
+                color:#8D8D8D;
+                font-size: $font-s-32;
+                line-height: 48px;
+                margin-bottom: 20px;
+            }
+            .footerInter-group{
+                max-width:350px; height:60px;
+                display:flex;
+                border-radius:4px;
+                input{
+                    max-width:214px;
+                    padding-left:15px;
+                    flex:2 1 auto;
+                    border:none;
+                    outline-color:$dark-brown;
+                    border:2px solid $dark-brown;
+                    border-right:none;
+                    border-radius:4px 0 0 4px;
+                }
+                .btn{
+                    flex:1 1 auto;
+                    max-width:129px;
+                    border:2px solid $dark-brown;
+                    background-color: $dark-brown;
+                    border-radius:0 4px 4px 0;
+                    color:#ffffff;
+                }
+            }
+        }
+    }
+}
+.footerBottom{
+    background-color: $dark-brown;
+    .container{
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logoEnd{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                margin-right: 20px;
+                padding: 20px 0;
+            }
+            p{
+                color:#ffffff;
+                padding: 32px 0;
+                font-size: 14px;
+                line-height: 21px;
+            }
+        }
+        .footer-menu{
+            display: flex;
+            justify-content: space-between;
+            li{
+                margin-left: 36px;
+                a{
+                    text-decoration: none;
+                    color:#ffffff;
+                    font-size: $font-s-20;
+                    line-height: 30px;
+                    padding: 28px 0;
+                    &:hover{
+                        color:blue;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@include iphone{
+    .subcribeSection{
+        padding: 0 12px;
+        .container{
+            .subContent{
+                max-width:100%;
+                h6{
+                    font-size: 27px;
+                }
+                .footerInter-group{
+                    input{
+                        max-width:65%;
+                    }
+                    .btn{
+                        max-width:36.33%;
+                    }
+                }
+            }
+        }
+    }
+    .footerBottom{
+        .container{
+            .logoEnd{
+                padding: 0;
+                margin: 0;
+                p{
+                    font-size: 11px;
+                }
+            }
+            .footer-menu{
+                display: none;
+            }
+        }
+    }
+}
